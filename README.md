@@ -6,7 +6,8 @@ If you feel compelled to contribute to the project, feel free to send funds to h
 
 # Pre-requisites
 * RaspberryPi hardware (for omxplayer)
-* systemd init system (because Raspbian is the intended target OS)
+* systemd init system (because Raspbian Lite is the intended target OS)
+  * Raspian Lite is **STRONGLY** recommended.  Before filing bug reports, please ensure you can replicate the bug on Raspbian Lite.
   * If installing on 'nix with other init systems, you will have to edit the install script or enable the displaycameras service with available tools for your init system.
   * The main script, normally installed at /usr/bin/displaycameras has an LSB header and will run as a systemv init script (if copied to /etc/init.d/...maybe just symlink to the /usr/bin/ location [untested])?  No other init systems have been tested or are supported.
 
@@ -22,7 +23,7 @@ Download https://github.com/Anonymousdog/displaycameras/archive/master.tar.gz
 2. `cd ./<source_code directory>` to move to the directory where the archive unpacked
 
 ## Make the Installer Executable
-`chmod +x ./install.sh`
+`chmod u+x ./install.sh`
 
 ## Installation
 1. `sudo ./install.sh`
